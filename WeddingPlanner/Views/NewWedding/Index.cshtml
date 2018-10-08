@@ -1,0 +1,42 @@
+
+@{
+    ViewData["Title"] = "NewWedding";
+}
+
+@model WeddingPlanner.Models.Wedding
+
+<h2>Welcome, @ViewBag.LoggedUser.FirstName!</h2>
+<p><a asp-controller="Login" asp-action="Logoff">log off</a></p>
+
+<form asp-controller="Wedding" asp-action="NewWedding" method="post">
+  <h3 class="m-4">Plan your wedding</h3>       
+        <div class="form-group">
+          <div class="row">
+            <label asp-for="WedderOne">Wedder One:</label>
+            <span asp-validation-for="WedderOne"></span>
+            <input type="text" class="form-control" asp-for="WedderOne" placeholder="Wedder One">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <label asp-for="WedderTwo">Wedder Two:</label>
+            <span asp-validation-for="WedderTwo"></span>
+            <input type="text" class="form-control" asp-for="WedderTwo" placeholder="Wedder Two">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <label asp-for="Date">Date:</label>
+            <span asp-validation-for="Date"></span>
+            <input type="text" class="form-control" asp-for="Date" placeholder="Date">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <label asp-for="Address">Wedding Address:</label>
+            <span asp-validation-for="Address"></span>
+            <input type="text" class="form-control" asp-for="Address" placeholder="Address">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-default">Register</button>
+</form>

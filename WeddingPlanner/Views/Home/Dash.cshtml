@@ -1,0 +1,38 @@
+@{
+    ViewData["Title"] = "DashBoard";
+}
+@model WeddingPlanner.Models.WeddingViewModel
+ <h1 class="m-4">Wedding Planner Dashboard></h1>
+ <form asp-action="Create" asp-controller="User" method="POST">
+    
+        <div class="form-group">
+            <div class="row">
+            <label asp-for="WedderOne">Wedder One:</label>
+            <span asp-validation-for="WedderOne"></span>
+            <input type="text" class="form-control" asp-for="WedderOne" placeholder="WedderOne">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+            <label asp-for="WedderTwo">Wedder Two:</label>
+            <span asp-validation-for="WedderTwo"></span>
+            <input type="password" class="form-control" asp-for="WedderTwo" placeholder="WedderTwo">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+            <label asp-for="Date">Date:</label>
+            <span asp-validation-for="Date"></span>
+            <input type="password" class="form-control" asp-for="Date" placeholder="Date">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+            <label asp-for="Date">Address:</label>
+            <span asp-validation-for="Address"></span>
+            <input type="password" class="form-control" asp-for="Address" placeholder="Address">
+            </div>
+        </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>
+ 

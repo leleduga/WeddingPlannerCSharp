@@ -1,0 +1,32 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+ <h2 class="m-4">Login</h2> 
+    @model WeddingPlanner.Models.LoginViewModel
+<form action="Login" method="post">
+
+        <h3 class="m-4">Login</h3>
+            <div class="form-group">
+                <div class="row">
+                <label for="LogEmail">Email:</label>
+                <!-- <span validation-for="LogEmail"></span> -->
+                <input type="text" class="form-control" for="LogEmail" placeholder="Email">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                <label for="PasswordToCheck">Password:</label>
+                <!-- <span asp-validation-for="PasswordToCheck"></span> -->
+                <input type="text" class="form-control" for="PasswordToCheck" placeholder="Password">
+                </div>
+            </div>
+        <button type="submit" class="btn btn-default">Login</button>
+        </form>
+        </div>
+    </form>
+    @if (ViewBag.message != null)
+{
+    <p>@ViewBag.message</p>
+
+}
